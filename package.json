@@ -1,0 +1,27 @@
+{
+  "name": "weekly-meal-plan",
+  "version": "1.0.0",
+  "description": "Pull Google Sheets and generate a weekly meal plan",
+  "main": "index.ts",
+  "type": "module",
+  "bin": {
+    "weekly-meal-plan": "./build/index.js"
+  },
+  "scripts": {
+		"start": "node ./build/index.js",
+    "build": "swc ./src/unique-random-number.ts ./src/index.ts -o ./build/index.js ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tschant",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "google-spreadsheet": "^3.3.0"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57",
+    "@swc/core": "^1.2.220",
+    "@types/google-spreadsheet": "^3.3.0"
+  }
+}
